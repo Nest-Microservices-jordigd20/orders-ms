@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  orders-db:
+    image: postgres:15.3
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    container_name: ordersms_database
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
