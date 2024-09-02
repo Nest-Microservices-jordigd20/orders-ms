@@ -12,6 +12,13 @@
 docker-compose up -d
 ```
 
+## Production environment
+
+Run the following command to build the Docker image:
+```bash
+docker build -f Dockerfile.prod -t orders-ms .
+```
+
 5. Synchronize the `Prisma` schema with the database
 
 ```bash
